@@ -1,0 +1,16 @@
+<%- include("partials/header.ejs") %>
+
+<div class="posts">
+  <h1>Latest Posts</h1>
+  <% if (posts && posts.length > 0) { %>
+    <ul>
+      <% posts.forEach(post => { %>
+        <li><a href="/<%= post.postName %>"><%= post.postName %></a></li>
+      <% }); %>
+    </ul>
+  <% } else { %>
+    <p>No posts available.</p>
+  <% } %>
+</div>
+
+<%- include("partials/footer.ejs") %>
